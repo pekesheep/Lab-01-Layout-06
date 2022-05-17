@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+:root {
+    --bg-color: #141414;
+}
+
+body {
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Jost', sans-serif;
+    background-color: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: auto;
+            max-height: 100%;
+            margin: 10px;
+        }
+
+        .platform-title {
+            color: white;
+            font-size: 1.5em;
+        }
+
+    }
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: white;
+            width: 70px;
+            height: 60px;
+            margin: 5px;
+        }
+
+        :hover {
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+        }
+
+
+    }
+
+}
+
+.section-title {
+    color: white;
+    padding: 10px;
+
+    #top-text {
+        font-weight: bold;
+
+    }
+
+    :before {
+        content: "5";
+    }
+}
+
+.top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .top-item {
+
+        img {
+            max-width: 100%;
+            min-width: 225px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.first {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+
+    .item {
+        display: flex;
+        flex: 1 1 250px;
+
+        img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+
+            &:hover {
+
+                transform: scale(1.25);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+
+    .item {
+        display: flex;
+        flex: 1 1 250px;
+
+        img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+
+            &:hover {
+
+                transform: scale(1.25);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .platform-title {
+        display: none;
+    }
+
+    .section-title {
+
+        :before {
+            content: "3";
+        }
+    }
+
+    .top {
+
+        .top-item {
+            display: flex;
+            justify-content: center;
+
+            img {
+                align-items: center;
+            }
+        }
+
+        div:nth-child(1),
+        div:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-width: 750px) {
+    .section-title {
+        font-size: 2.5em;
+    }
+
+    .top,
+    .first,
+    .second {
+        flex-direction: column-reverse;
+    }
+
+    .first,
+    .second {
+        align-content: center;
+
+        div {
+            min-height: 100%;
+        }
+    }
+
+}
